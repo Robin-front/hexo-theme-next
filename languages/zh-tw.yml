@@ -16,6 +16,8 @@ menu:
   schedule: 日程表
   sitemap: 站點地圖
   commonweal: 公益404
+  book: RXJS中文文档
+  travel: 旅行
 
 sidebar:
   overview: 本站概覽
@@ -37,6 +39,7 @@ post:
   copyright:
     author: Post author
     link: Post link
+    translateFrom: 本文翻译自
     license_title: Copyright Notice
     license_content: 'All articles in this blog are licensed under
       <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'

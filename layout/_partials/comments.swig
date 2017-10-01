@@ -20,6 +20,8 @@
           <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
       </div>
+    {% elseif theme.gitalk.enable %}
+      <div id="gitalk-container"></div>
     {% elseif theme.hypercomments_id %}
       <div id="hypercomments_widget"></div>
     {% elseif theme.youyan_uid %}

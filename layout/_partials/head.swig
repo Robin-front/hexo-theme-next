@@ -63,6 +63,14 @@
   <link href="{{ fancybox_css_uri }}" rel="stylesheet" type="text/css" />
 {% endif %}
 
+{% if theme.gitalk %}
+  {% set gitalk_css_uri = url_for(theme.vendors._internal + '/gitalk/gitalk.css?v=1.0.0') %}
+  {% if theme.vendors.gitalk_css %}
+    {% set gitalk_css_uri = theme.vendors.gitalk_css %}
+  {% endif %}
+  <link href="{{ gitalk_css_uri }}" rel="stylesheet" type="text/css" />
+{% endif %}
+
 {% include "./head/external-fonts.swig" %}
 
 {% set font_awesome_uri = url_for(theme.vendors._internal + '/font-awesome/css/font-awesome.min.css?v=4.6.2') %}
@@ -94,6 +102,10 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
+{% if theme.touchicon %}
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <link rel="apple-touch-icon" href="{{ url_for(theme.touchicon) }}?v={{ theme.version }}">
+{% endif %}
 
 {% if theme.facebook_sdk.enable and theme.facebook_sdk.webmaster %}
   <meta property="fb:admins" content="{{ theme.facebook_sdk.fb_admin }}" />

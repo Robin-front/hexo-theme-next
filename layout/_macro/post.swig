@@ -342,6 +342,11 @@
       {% endif %}
 
       {% if not is_index %}
+        <h3>相关文章</h3>
+        {{ popular_posts( {isDate: true} , post ) }}
+      {% endif %}
+
+      {% if not is_index %}
       {% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
         <div class="post-widgets">
         {% if theme.rating.enable %}

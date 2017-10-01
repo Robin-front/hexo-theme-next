@@ -12,9 +12,10 @@ override: false
 
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
+touchicon: /touch-icon.png
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "robin,blog,web,font-end,javascript,html,css,nodejs"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -24,10 +25,10 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2014
 
   # Icon between year and copyright info.
-  icon: user
+  icon: heart
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -54,7 +55,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -72,13 +73,15 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  travel: /tags/travel/ || plane
+  book: /RxJS-doc-chinese/ || book
+  # schedule: /schedule/ || calendar
+  commonweal: /404/ || heartbeat
+  sitemap: /sitemap.xml || sitemap
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -105,11 +108,11 @@ scheme: Muse
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/robin-front || github
+  E-Mail: mailto:lb.robin1991@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
+  Twitter: https://twitter.com/lb_robin || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
@@ -120,7 +123,7 @@ scheme: Muse
 social_icons:
   enable: true
   icons_only: false
-  transition: false
+  transition: true
 
 # Blog rolls
 #links_title: Links
@@ -132,7 +135,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: https://avatars2.githubusercontent.com/u/6723674?v=3&s=460
 
 # Table Of Contents in the Sidebar
 toc:
@@ -173,7 +176,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view
   onmobile: false
@@ -184,7 +187,7 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically saving scroll position on each post/page in cookies.
 save_scroll: false
@@ -202,16 +205,16 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
 
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
-  totalcount: false
+  wordcount: true
+  min2read: true
+  totalcount: true
   separated_meta: true
 
 # Wechat Subscriber
@@ -228,7 +231,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -238,7 +241,7 @@ post_copyright:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
@@ -256,7 +259,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night bright
 
 
 # ---------------------------------------------------------------
@@ -332,15 +335,23 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 51f2c21567935649debac704a10c43f1
 
 # Duoshuo ShortName
 #duoshuo_shortname:
 
+# gitalk
+gitalk:
+  enable: true
+  clientID: '470b9e9d99d37489877f'
+  clientSecret: 'c319e368fd485f89601b4c2c0cee649bd9cf97cd'
+  repo: 'robin-front.github.io'
+  owner: 'Robin-front'
+
 # Disqus
 disqus:
   enable: false
-  shortname:
+  shortname: robin-front-github-io
   count: true
 
 # Hypercomments
@@ -392,10 +403,11 @@ valine:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+baidu_site_verification: T2V9h2EnoE
+google_site_verification: ezF4b6TIq3nrF8BJmQrK_v9BmJnUQfVVPB4xBYo7AD8
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-74634898-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -416,7 +428,7 @@ valine:
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -469,7 +481,7 @@ leancloud_visitors:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -492,7 +504,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -593,7 +605,7 @@ motion:
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -638,37 +650,41 @@ vendors:
   # Internal path prefix. Please do not edit it.
   _internal: lib
 
+  # gitalk
+  gitalk: https://unpkg.com/gitalk/dist/gitalk.min.js
+  gitalk_css: https://unpkg.com/gitalk/dist/gitalk.css
+
   # Internal version: 2.1.3
-  jquery:
+  jquery: https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox:
-  fancybox_css:
+  fancybox: https://cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js
+  fancybox_css: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
 
   # Internal version: 1.0.6
   # See: https://github.com/ftlabs/fastclick
-  fastclick:
+  fastclick: https://cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
-  lazyload:
+  lazyload: https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity:
+  velocity: https://cdn.staticfile.org/velocity/1.2.1/velocity.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
-  velocity_ui:
+  velocity_ui: https://cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js
 
   # Internal version: 0.7.9
   # See: https://faisalman.github.io/ua-parser-js/
-  ua_parser:
+  ua_parser: https://cdn.staticfile.org/UAParser.js/0.7.9/ua-parser.min.js
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome:
+  fontawesome: https://cdn.staticfile.org/font-awesome/4.6.2/css/font-awesome.min.css
 
   # Internal version: 1
   # https://www.algolia.com
@@ -685,7 +701,7 @@ vendors:
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
-  canvas_nest:
+  # canvas_nest: https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js
 
   # three
   three:

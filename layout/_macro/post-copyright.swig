@@ -3,6 +3,12 @@
     <strong>{{ __('post.copyright.author') + __('symbol.colon') }}</strong>
     {{ config.author }}
   </li>
+  {% if post.translateFrom %}
+  <li class="post-copyright-link">
+    <strong>{{ __('post.copyright.translateFrom') + __('symbol.colon') }}</strong>
+    <a href="{{ post.translateFrom }}" title="{{ post.title }}">{{ post.translateFrom }}</a>
+  </li>
+  {% endif %}
   <li class="post-copyright-link">
     <strong>{{ __('post.copyright.link') + __('symbol.colon') }}</strong>
     <a href="{{ post.permalink }}" title="{{ post.title }}">{{ post.permalink }}</a>
