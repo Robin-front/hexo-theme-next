@@ -98,7 +98,7 @@ menu:
   categories: /categories/ || th
   archives: /archives/ || archive
   travel: /tags/travel/ || plane
-  book: /RxJS-doc-chinese/ || book
+  # book: /RxJS-doc-chinese/ || book
   # schedule: /schedule/ || calendar
   commonweal: /404/ || heartbeat
   sitemap: /sitemap.xml || sitemap
