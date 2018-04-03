@@ -8,6 +8,7 @@
           repo: '{{ theme.gitalk.repo }}',
           owner: '{{ theme.gitalk.owner }}',
           admin: ['{{ theme.gitalk.owner }}'],
+          id: '{{ page.title }}',
           distractionFreeMode: true,
         });
         gitalk.render('gitalk-container');
