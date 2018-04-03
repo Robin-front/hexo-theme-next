@@ -1,8 +1,14 @@
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>{{ __('post.copyright.author') + __('symbol.colon') }}</strong>
+    <strong>{% if post.originAuthor %}译文{% endif %}{{ __('post.copyright.author') + __('symbol.colon') }}</strong>
     {{ post.author | default(config.author) }}
   </li>
+  {% if post.originAuthor %}
+  <li class="post-copyright-link">
+    <strong>{{ __('post.copyright.author') + __('symbol.colon') }}</strong>
+    <a href="{{ post.originAuthorLink }}" title="{{ post.originAuthor }}">{{ post.originAuthor }}</a>
+  </li>
+  {% endif %}
   {% if post.translateFrom %}
   <li class="post-copyright-link">
     <strong>{{ __('post.copyright.translateFrom') + __('symbol.colon') }}</strong>
